@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<section>
+    <div class="item-selected" data-item="<%= item.id %>">
+        <img src="./images/<%= item.image %>.jpg">
+        <div>
+            <div><%= item.name %></div>
+            <div>$<%= item.price %></div>
+            <input type="number" value="1" data-item-quantity />
+            <button data-btn>Add Cart</button>
+        </div>
+    </div>
+    <div class="item-about">
+        <h3>About this product</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eligendi laudantium repellendus explicabo
+            veritatis nostrum vitae at expedita recusandae accusamus rerum mollitia, quis magni vel eveniet dicta quia
+            odio deserunt?</p>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

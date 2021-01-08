@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<section>
+    <div class="items-cart">
+        <% items.forEach(item => { %>
+        <div class="item-cart" data-cart-item-id="<%= item.id %>">
+            <img src="./images/<%= item.image %>.jpg">
+            <div class="item-data">
+                <div><%= item.name %></div>
+                <div><%= item.quantity %> &times; $<%= item.price %></div>
+            </div>
+            <button class="remove-cart" data-delete-btn>&times;</button>
+        </div>
+        <% }) %>
+        <div class="sub-total">
+            <div>Sub Total: $2245.99</div>
+            <button>Checkout</button>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

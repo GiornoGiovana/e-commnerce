@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<section>
+    <div class="items-shop">
+        <% items.forEach(item => { %>
+        <div class="item" data-item-id="<%= item.id %>">
+            <img src="./images/<%= item.image %>.jpg">
+            <div data-item-name><%= item.name %></div>
+            <div>$<%= item.price %></div>
+        </div>
+        <% }) %>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
